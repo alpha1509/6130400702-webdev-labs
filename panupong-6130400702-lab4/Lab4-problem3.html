@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 Problem3</title>
+        <style>
+            h1 {
+                font-size: 50px;
+            }
+
+            #pLink {
+                text-align: center;
+            }
+
+            table, th, td {
+                padding: 15px 20px;
+                border: 1px solid black;
+                border-collapse: collapse;
+            
+            }
+            .yellowColumn {
+                background-color: yellow;
+            }
+
+            .redColumn {
+                background-color: red;
+            }
+
+            .textRight, .redColumn, .yellowColumn {
+                text-align: right;
+            }
+
+            div {
+                display: inline-block;
+                
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Report coronavirus cases</h1>
+        <div>
+        <p id="pLink">Taken from 
+        <a href="https://www.worldometers.info/coronavirus/">Worldometers.info</a></p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th>Total Cases</th>
+            <th class="yellowColumn">New Cases</th>
+            <th>Total Deaths</th>
+            <th class="redColumn">New Deaths</th>
+        </tr>
+
+        <tr>
+            <td>1.</th>
+            <td>USA</th>
+            <td class="textRight">5,874,146</th>
+            <td class="yellowColumn">+32,718</th>
+            <td class="textRight">180,604</th>
+            <td class="redColumn">+430</th>
+        </tr>
+
+        <tr>
+            <td>2.</th>
+            <td>Brazil</th>
+            <td class="textRight">3,605,783</th>
+            <td class="yellowColumn">+23.085</th>
+            <td class="textRight">114,772</th>
+            <td class="redColumn">+495</th>
+        </tr>
+
+        <tr>
+            <td>3.</th>
+            <td>India</th>
+            <td class="textRight">3,105,185</th>
+            <td class="yellowColumn">+61,749</th>
+            <td class="textRight">57,692</th>
+            <td class="redColumn">+846</th>
+        </tr>   
+    </table></div>
+    </body>
+</html>

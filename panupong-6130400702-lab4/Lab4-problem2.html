@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 Problem2</title>
+        <style>
+        .navi {
+            overflow: hidden;
+            background-color: #272727;
+        }
+
+        .navi a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navi a:hover {
+            background-color: #5a5a5a;
+            color: #ffffff;
+        }
+        
+        .navi a.active {
+            background-color: #b51adb;
+            color: white;
+        }
+        .navi a.null {
+            background-color: #b51adb;
+            background-color: #272727;
+        }
+        ul {
+            list-style-type: circle;
+        }
+        ol {
+            list-style-type: lower-roman;
+        }
+        div#listSection {
+            margin: 15px;
+        }
+        #list1 {
+            border: 5px solid blue;
+            padding: 5px;
+            width: 200px;
+            height: fit-content;
+            background-color: #a8c3fc;
+        }
+        #list2 {
+            border: 5px solid green;
+            padding: 5px;
+            width: 200px;
+            height: fit-content;
+            background-color: #74e074;
+        }
+        </style>
+
+    </head>
+    <body>
+        <div class="navi">
+            <a class = "null" href="#null"></a>
+            <a class = "active" href="#unord">Unordered List</a>
+            <a href="#order">Ordered List</a>
+        </div>
+        <div id="listSection">
+            <p id=list1>This is an unordered list:</p>
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Coca Cola</li>
+                </ul>
+
+            <p id=list2>This is an ordered list:</p>
+                <ol>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Coca Cola</li>
+                </ol>
+        </div>
+    </body>
+</html>

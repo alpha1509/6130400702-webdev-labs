@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4 Problem4</title>
+
+    <style>
+
+        #psinfo {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            
+        }
+
+        input#fname, input#lname {
+            width: 96%;
+            padding: 20px;
+            margin-left: 20px;
+            
+        }
+
+        select#province {
+            width: 98%;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        input#submitButt {
+            width: 20%;
+            padding: 20px;
+            color: white;
+            background-color: #00cc00;
+            border:#00cc00;
+            border-radius: 6px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+        #fPd {
+            padding: 20px;
+        }
+        .psinfo input#sm:hover {
+            cursor: pointer;
+            background: #008800;
+            color: rgb(255, 255, 255);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Personal Information Form</h1>
+
+    <div id="psinfo">
+
+            <form id = "psnform">
+                <p id="fPd">First Name</p>
+                <input id ="fname" type="fn" name="" placeholder="">
+                <p id="fPd">Last Name</p>
+                <input id ="lname" type="ln" name="" placeholder="">
+                <p id="fPd">Province</p>
+                <select id="province" name="pvlist" form="psnform">
+                    <option value="kkPv">Khon Kaen</option>
+                    <option value="cmPv">Chiang Mai</option>
+                    <option value="bkPv">Bangkok</option>
+                </select>
+
+                <input id= "submitButt" type="submit" name="" value="Submit">
+
+            </form>
+            
+        </div>
+    
+
+</body>
+</html>
