@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My Book List</title>
+  </head>
+  <body>
+    <h1>My Book List</h1>
+    <div id="books_list">Click to generate my book list</div>
+    <script>
+        var books = [
+      		{
+       			title: 'Sapiens: A Brief History of Humankind',
+        			url: 'https://www.goodreads.com/book/show/23692271-sapiens',
+        			author: 'Yuval Noah Harari' 
+      		}, {
+        			title: 'The Glass Castle',
+        			url: 'https://www.goodreads.com/book/show/7445.The_Glass_Castle',
+       			 author: 'Jeannette Walls'
+      		}
+   	 ]
+              
+        var generateBook = document.getElementById('books_list');
+        var newOl = document.createElement('ol');
+        var book1 = document.createElement('li');
+        var book2 = document.createElement('li');
+        var link1 = document.createElement('a');
+        var link2 = document.createElement('a');
+        var text1 = document.createElement('p');
+        var text2 = document.createElement('p');
+        console.log(newOl);
+        link1.target = "_blank";
+        link2.target = "_blank";
+        link1.href = books[0].url;
+        link2.href = books[1].url;
+        link1.appendChild(document.createTextNode(books[0].title));
+        link2.appendChild(document.createTextNode(books[1].title));
+        text1.appendChild(link1);
+        text2.appendChild(link2);
+        text1.innerHTML += " By " + books[0].author;
+        text2.innerHTML += " By " + books[1].author;
+        book1.appendChild(text1);
+        book2.appendChild(text2);
+
+        newOl.appendChild(book1);
+        newOl.appendChild(book2);
+       
+        
+
+        generateBook.onclick = function() {
+            generateBook.appendChild(newOl);
+        }
+
+    </script>
+  </body>
+</html>
