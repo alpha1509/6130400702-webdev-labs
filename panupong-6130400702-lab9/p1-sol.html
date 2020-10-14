@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Problem1 Solution</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+    <p></p>
+
+    <script>
+        var addBtn = document.getElementsByTagName("button")[0];
+        var ul = document.getElementsByTagName('ul')[0];    
+        console.log(ul);
+        addBtn.addEventListener("click", onClickBtn);
+        function onClickBtn() {
+            var newList = document.createElement('li');
+            var input = document.getElementById("item").value;
+            var delB = document.createElement('button');
+            delB.innerHTML = "Delete";
+            delB.onclick = function () {
+              this.parentNode.parentNode.removeChild(this.parentNode);
+              update();
+            }
+            newList.innerHTML = input
+            newList.className = 'newList';
+            newList.appendChild(delB);
+            ul.appendChild(newList);
+            update();
+        }
+        function update() {
+          var listLen = document.querySelectorAll('li').length;
+          var p = document.getElementsByTagName('p')[0];
+          if (listLen == 0) {
+            p.innerHTML = "";
+          } else if (listLen == 1) {
+            p.innerHTML = "The list has 1 item";
+          } else if (listLen > 1) {
+            p.innerHTML = "The list has " + listLen + " items";
+          }
+          
+        };
+    </script>
+  </body>
+</html>

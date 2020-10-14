@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Problem 3</title>
+    </head>
+    <body>
+        <h1>Reading Student Imformation</h1>
+        <ol id="students"></ol>
+        
+        <script>
+            
+            fetch("students.json").then(response => {
+                return response.json();
+            }).then(data => {
+                wclass = data.wclass
+                var stdList = document.getElementById('students');
+                console.log(stdList);
+                for (var std of wclass) {
+                    var li = document.createElement('li');
+                    li.innerHTML += 
+                    std.student["@attributes"].id + " " + "<b>" +
+                    std.student.name + "</b>" + " has skills <i>" +
+                    std.student.skill + "</i>";
+                    stdList.appendChild(li);
+                }
+            })
+        </script>
+    </body>
+</html>

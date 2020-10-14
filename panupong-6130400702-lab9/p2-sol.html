@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Problem 3</title>
+    </head>
+    <body>
+        <h1>Loading Students Information</h1>
+        <p id="students"></p>
+        
+        <script>
+            var display = document.getElementById('students');
+            fetch("students.json").then(function(response) {
+                response.text().then(function(text) {
+                    display.textContent = text;
+                });
+            });
+          
+        </script>
+    </body>
+</html>
