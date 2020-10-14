@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Problem 3</title>
+        <title>Problem 4</title>
     </head>
     <body>
         <ol id="list"></ol>
@@ -16,12 +16,14 @@
                 var ol = document.getElementById('list');
                 for (var place of results) {
                     var li = document.createElement('li');
-                    var span = document.createElement('span');
-                    li.style.color = "blue";
-                    span.style.color = "green";
-                    li.innerHTML = "name = " + place.name + "</br>"
-                    span.innerHTML = "location = " + place.geometry.location.lat + " " + place.geometry.location.lng;
-                    li.appendChild(span);
+                    var span1 = document.createElement('span')
+                    var span2 = document.createElement('span');
+                    span1.style.color = "blue";
+                    span2.style.color = "green";
+                    span1.innerHTML = "name = " + place.name + "</br>"
+                    span2.innerHTML = "location = " + place.geometry.location.lat + " " + place.geometry.location.lng;
+                    li.appendChild(span1);
+                    li.appendChild(span2);
                     ol.appendChild(li);
                 }
             })
