@@ -1,0 +1,17 @@
+html
+    head   
+        title Form Tester
+    body
+        h1(style = "text-align:center;") Student Form
+        form(action = "/", method = "POST")
+            table(style = "width: 500px;")
+                tr
+                    td: label(for = "name") Name:
+                    td: input(name = "name" value = "Alpha" style = "width: 100%;")
+                tr
+                    td: label(for = "internship") Internship company:
+                    td: input(name = "internship" value = "Aero Group" style = "width: 100%;")
+                tr    
+                    td: label(for = "skills") Skills:
+                    td: input(name = "skills" value = "HTML, CSS, JavaScript" style = "width: 100%;")
+            button(type = "submit") Submit
